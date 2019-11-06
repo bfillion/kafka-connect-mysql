@@ -83,6 +83,12 @@ services:
      - MYSQL_USER=mysqluser
      - MYSQL_PASSWORD=mysqlpw
   
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  
   connect:
     image: debezium/connect:0.10
     ports:
